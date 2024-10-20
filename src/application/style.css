@@ -1,0 +1,39 @@
+.white-bg{
+    -fx-background-color:#fff;
+}
+.btn{
+    -fx-background-color: linear-gradient(to bottom right, #106f33, #39c98d);
+    -fx-cursor:hand;
+    -fx-text-fill: #fff;
+    -fx-font-size:14px;
+    -fx-font-family:Arial;
+    
+ }
+ .btn:hover{
+     -fx-background-color:linear-gradient(to bottom right, #29904f, #5acd9b);
+
+ }
+.radius{
+ 	-fx-background-radius:5px;
+}
+.shadow{
+	-fx-effect:dropshadow(three-pass-box,rgba(0,0,0,0.5),5,0,0,0);
+}
+.bg-color{
+	-fx-background-color: linear-gradient(to bottom right, #106f33, #39c98d);
+}
+
+
+
+
+.textfield{
+
+    -fx-border-color: #000;
+    -fx-border-width: .5px;
+    -fx-border-radius:4px;
+}
+.textfield:focused{
+    -fx-border-color:linear-gradient(to bottom right, #1f974f, #17d764);
+    -fx-border-width:.8px
+
+}

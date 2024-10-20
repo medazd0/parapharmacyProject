@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignController">
+   <children>
+      <AnchorPane fx:id="main_form" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="277.0" prefWidth="535.0" styleClass="white-bg" stylesheets="@style.css" StackPane.alignment="CENTER">
+         <children>
+            <AnchorPane fx:id="login_form" layoutX="13.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="269.0" prefWidth="535.0" stylesheets="@style.css" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <children>
+                  <TextField fx:id="login_username" alignment="CENTER" layoutX="109.0" layoutY="53.0" prefHeight="26.0" prefWidth="299.0" promptText="username" styleClass="textfield" stylesheets="@style.css">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor></TextField>
+                  <PasswordField fx:id="login_password" alignment="CENTER" layoutX="109.0" layoutY="95.0" prefHeight="26.0" prefWidth="299.0" promptText="password" styleClass="textfield" stylesheets="@style.css" />
+                  <TextField fx:id="login_showPassword" alignment="CENTER" layoutX="107.0" layoutY="96.0" prefHeight="26.0" prefWidth="299.0" promptText="password" styleClass="textfield" stylesheets="@style.css" visible="false" />
+                  <CheckBox fx:id="login_selectShowPassword" alignment="CENTER" layoutX="105.0" layoutY="127.0" mnemonicParsing="false" onAction="#showPassword" opacity="0.52" prefHeight="19.0" prefWidth="111.0" text="Show Password">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </CheckBox>
+                  <Button fx:id="login_btnCreatAccount" alignment="CENTER" layoutX="109.0" layoutY="195.0" mnemonicParsing="false" onAction="#switchF" prefHeight="30.0" prefWidth="299.0" styleClass="btn" stylesheets="@style.css" text="Creat Account">
+                     <padding>
+                        <Insets bottom="3.0" left="3.0" top="3.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="login_btn" alignment="CENTER" layoutX="108.0" layoutY="151.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="299.0" styleClass="btn" stylesheets="@style.css" text="Login" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="194.0" layoutY="13.0" prefHeight="26.0" prefWidth="128.0" text="Sign In Account" textFill="#37bf82">
+                     <font>
+                        <Font name="Gill Sans MT" size="20.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="login_forgetPassword" alignment="CENTER" layoutX="306.0" layoutY="125.0" onAction="#switchF" prefHeight="22.0" prefWidth="102.0" text="Forget Password?">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Hyperlink>
+                  <FontAwesomeIcon fill="#37bf82" glyphName="USER" layoutX="113.0" layoutY="74.0" size="1.5em" />
+                  <FontAwesomeIcon fill="#37bf82" glyphName="LOCK" layoutX="113.0" layoutY="116.0" size="1.5em" />
+                  <!--  <FontAwesomeIconView glyphName="USER" layoutX="35.0" layoutY="63.0" size="50" />-->
+               </children>
+               <styleClass>
+                  <String fx:value="radius" />
+                  <String fx:value="shadow" />
+                  <String fx:value="white-bg" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane fx:id="signup_form" layoutX="13.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="269.0" prefWidth="535.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+               <children>
+                  <AnchorPane layoutX="30.0" layoutY="14.0" prefHeight="269.0" prefWidth="535.0" stylesheets="@style.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <TextField fx:id="signup_username" alignment="CENTER" layoutX="19.0" layoutY="57.0" prefHeight="18.0" prefWidth="224.0" promptText="username" styleClass="textfield" stylesheets="@style.css" />
+                        <PasswordField fx:id="signup_password" alignment="CENTER" layoutX="19.0" layoutY="100.0" prefHeight="18.0" prefWidth="224.0" promptText="password" styleClass="textfield" stylesheets="@style.css" />
+                        <Label layoutX="34.0" layoutY="371.0" styleClass="lab" stylesheets="@style.css" text="Sign In Account" textFill="#309e6e" />
+                        <Button fx:id="signup_btnlogIn" layoutX="253.0" layoutY="197.0" mnemonicParsing="false" onAction="#switchF" prefHeight="30.0" prefWidth="224.0" styleClass="btn" stylesheets="@style.css" text="Log In">
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" top="3.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="signup_btn" layoutX="19.0" layoutY="197.0" mnemonicParsing="false" onAction="#registre" prefHeight="30.0" prefWidth="224.0" styleClass="btn" stylesheets="@style.css" text="Sign Up" />
+                        <Label layoutX="182.0" layoutY="14.0" prefHeight="26.0" prefWidth="141.0" text="Sign Up Account" textFill="#3bbc82">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="signup_email" alignment="CENTER" layoutX="253.0" layoutY="57.0" prefHeight="18.0" prefWidth="224.0" promptText="Email Address" styleClass="textfield" stylesheets="@style.css" />
+                        <PasswordField fx:id="signup_confirmPassword" alignment="CENTER" layoutX="253.0" layoutY="100.0" prefHeight="18.0" prefWidth="224.0" promptText="Confirm Password" styleClass="textfield" stylesheets="@style.css" />
+                        <ComboBox fx:id="signup_selectQuestion" layoutX="19.0" layoutY="145.0" prefHeight="25.0" prefWidth="224.0" promptText="Select Question" />
+                        <TextField fx:id="signup_Answer" alignment="CENTER" layoutX="253.0" layoutY="146.0" prefHeight="18.0" prefWidth="224.0" promptText="Answer" styleClass="textfield" stylesheets="@style.css" />
+                        <FontAwesomeIcon fill="#37bf82" glyphName="USER" layoutX="26.0" layoutY="75.0" size="1.5em" />
+                        <FontAwesomeIcon fill="#37bf82" glyphName="LOCK" layoutX="27.0" layoutY="118.0" size="1.5em" />
+                        <FontAwesomeIcon fill="#37bf82" glyphName="LOCK" layoutX="260.0" layoutY="118.0" size="1.5em" />
+                        <FontAwesomeIcon fill="#37bf82" glyphName="AT" layoutX="258.0" layoutY="75.0" size="1.5em" />
+                        <FontAwesomeIcon fill="#37bf82" glyphName="QUESTION" layoutX="259.0" layoutY="164.0" size="1.5em" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="white-bg" />
+                        <String fx:value="radius" />
+                     </styleClass>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="forget_form" layoutX="13.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="269.0" prefWidth="535.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+               <children>
+                  <AnchorPane layoutX="105.9000015258789" layoutY="14.0" stylesheets="@style.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <TextField fx:id="forget_username" layoutX="98.0" layoutY="64.0" prefHeight="26.0" prefWidth="299.0" promptText="username" styleClass="textfield" stylesheets="@style.css" />
+                        <Button fx:id="forget_btnBack" layoutX="269.0" layoutY="193.0" mnemonicParsing="false" onAction="#switchF" prefHeight="30.0" prefWidth="128.0" styleClass="btn" stylesheets="@style.css" text="Back">
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" top="3.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="forget_btnProceed" layoutX="98.0" layoutY="193.0" mnemonicParsing="false" onAction="#forgotPassword" prefHeight="30.0" prefWidth="128.0" styleClass="btn" stylesheets="@style.css" text="Proceed" />
+                        <Label layoutX="185.0" layoutY="14.0" prefHeight="26.0" prefWidth="141.0" text="Forget Password" textFill="#3bbc82">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="forget_Answer" layoutX="98.0" layoutY="154.0" prefHeight="26.0" prefWidth="299.0" promptText="Answer" styleClass="textfield" stylesheets="@style.css" />
+                        <ComboBox fx:id="forget_selectQustion" layoutX="98.0" layoutY="108.0" prefHeight="27.0" prefWidth="299.0" promptText="Select Question" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="radius" />
+                        <String fx:value="white-bg" />
+                     </styleClass>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="forget2_form" layoutX="13.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="269.0" prefWidth="535.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="8.0">
+               <children>
+                  <AnchorPane layoutX="113.9000015258789" layoutY="38.0" stylesheets="@style.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <PasswordField fx:id="forget2_password" layoutX="98.0" layoutY="70.0" prefHeight="26.0" prefWidth="299.0" promptText="Password" styleClass="textfield" stylesheets="@style.css" />
+                        <Button fx:id="forget2_btnBack" layoutX="256.0" layoutY="168.0" mnemonicParsing="false" onAction="#switchF" prefHeight="30.0" prefWidth="141.0" styleClass="btn" stylesheets="@style.css" text="Back">                     
+                           <padding>
+                              <Insets bottom="3.0" left="3.0" top="3.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="forget2_btnProceed" layoutX="98.0" layoutY="168.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="30.0" prefWidth="141.0" styleClass="btn" stylesheets="@style.css" text="Change Password" />
+                        <Label layoutX="177.0" layoutY="24.0" prefHeight="26.0" prefWidth="141.0" text="Forget Password" textFill="#33a46f">
+                           <font>
+                              <Font name="Gill Sans MT" size="20.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="forget2_confirmPassword" layoutX="98.0" layoutY="119.0" prefHeight="18.0" prefWidth="299.0" promptText="Confirm Password" styleClass="textfield" stylesheets="@style.css" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                        <String fx:value="radius" />
+                     </styleClass>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

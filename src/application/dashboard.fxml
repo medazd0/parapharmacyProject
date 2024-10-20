@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DashBoardController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="600.0" prefWidth="1077.0">
+         <children>
+            <BorderPane layoutX="210.0" layoutY="140.0" prefHeight="600.0" prefWidth="1314.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="40.0" prefWidth="1100.0" stylesheets="@main.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="39.0" layoutY="-86.0" prefHeight="40.0" prefWidth="215.0" styleClass="bg-color-1" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="28.0" layoutY="12.0" prefHeight="19.0" prefWidth="156.0" text="Para Management System" textFill="WHITE">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Circle fx:id="top_profile" fill="DODGERBLUE" layoutX="1019.0" layoutY="21.0" radius="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="68.0" />
+                        <Label layoutX="1039.0" layoutY="12.0" text="Active" AnchorPane.rightAnchor="28.0" />
+                        <Circle fill="#1dfc7a" layoutX="1086.0" layoutY="21.0" radius="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" AnchorPane.rightAnchor="10.0" />
+                        <Label fx:id="we" layoutX="785.0" layoutY="12.0" prefHeight="20.0" prefWidth="64.0" text="welcome  " AnchorPane.rightAnchor="251.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="date_time" alignment="CENTER_RIGHT" layoutX="557.0" layoutY="13.0" prefHeight="17.0" prefWidth="179.0" text="DD:MM:YY" AnchorPane.rightAnchor="364.0" />
+                        <Label fx:id="current_form" layoutX="235.0" layoutY="10.0" prefHeight="17.0" prefWidth="179.0" styleClass="header-1" stylesheets="@main.css" text="Dashboard form" AnchorPane.leftAnchor="235.0" AnchorPane.topAnchor="10.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="top_username" layoutX="849.0" layoutY="11.0" prefHeight="17.0" prefWidth="88.0" text="hmed" AnchorPane.rightAnchor="163.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="border-top" />
+                     </styleClass>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane fx:id="ffffff" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="215.0" styleClass="bg-color-1" stylesheets="@main.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="dashboard_btn" layoutX="9.0" layoutY="222.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="200.0" styleClass="nav-btn-1" stylesheets="@main.css" text="Dashboard" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9e9e9e" glyphName="DASHBOARD" size="20px" />
+                           </graphic></Button>
+                         <Button fx:id="products_btn" layoutX="9.0" layoutY="259.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="200.0" styleClass="nav-btn-1" stylesheets="@main.css" text="Products" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9e9e9e" glyphName="BOOK" size="20px" />
+                           </graphic></Button>
+                           
+                        <Button fx:id="suppliers_btn" layoutX="9.0" layoutY="301.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="200.0" styleClass="nav-btn-1" stylesheets="@main.css" text="Suppliers" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9e9e9e" glyphName="USERS" size="20px" />
+                           </graphic></Button>
+                        <Button fx:id="stocks_btn" layoutX="9.0" layoutY="383.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="200.0" styleClass="nav-btn-1" stylesheets="@main.css" text="Stocks" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9e9e9e" glyphName="TRUCK" size="20px" />
+                           </graphic></Button>
+                        <Button fx:id="contacts_btn" layoutX="9.0" layoutY="425.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="200.0" styleClass="nav-btn-1" stylesheets="@main.css" text="Contacts" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9e9e9e" glyphName="PHONE" size="20px" />
+                           </graphic></Button>
+                        <Button fx:id="user_btn" layoutX="9.0" layoutY="468.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="200.0" styleClass="nav-btn-1" stylesheets="@main.css" text="User" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9e9e9e" glyphName="USER" size="20px" />
+                           </graphic></Button>
+                        <Button fx:id="setting_btn" layoutX="9.0" layoutY="509.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="200.0" styleClass="nav-btn-1" stylesheets="@main.css" text="Setting" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9e9e9e" glyphName="COGS" size="20px" />
+                           </graphic></Button>
+                        <Label layoutX="12.0" layoutY="157.0" prefHeight="17.0" prefWidth="79.0" text="Admin_ID :" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="182.0" prefHeight="17.0" prefWidth="79.0" text="Username :" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nav_idUser" layoutX="106.0" layoutY="157.0" prefHeight="17.0" prefWidth="65.0" text="1" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nav_username" layoutX="106.0" layoutY="182.0" prefHeight="17.0" prefWidth="98.0" text="ahmed" textFill="#fffdfd">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Line endX="176.0" layoutX="14.0" layoutY="214.0" startX="-4.5" />
+                        <Button fx:id="factor_btn" layoutX="9.0" layoutY="344.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="200.0" styleClass="nav-btn-1" stylesheets="@main.css" text="Factor" textFill="WHITE">
+                           <graphic>
+                              <FontAwesomeIcon fill="#9e9e9e" glyphName="COPY" size="20px" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashboard_form" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane fx:id="dashboard_form" prefHeight="560.0" prefWidth="1145.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="12.0" layoutY="14.0" prefHeight="158.0" prefWidth="917.0" stylesheets="@main.css" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0" prefWidth="981.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <AnchorPane layoutX="45.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="250.0" stylesheets="@main.css" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="14.0">
+                                                         <styleClass>
+                                                            <String fx:value="bg-color-1" />
+                                                            <String fx:value="radius" />
+                                                         </styleClass>
+                                                         <children>
+                                                            <Label fx:id="nbr_monthly" layoutX="122.0" layoutY="39.0" prefHeight="17.0" prefWidth="36.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="49.0" layoutY="78.0" prefHeight="19.0" prefWidth="152.0" text="Number Of Monthly sales" textFill="#f8f8f8">
+                                                               <font>
+                                                                  <Font size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="300.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="250.0" stylesheets="@main.css" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="14.0">
+                                                         <styleClass>
+                                                            <String fx:value="bg-color-1" />
+                                                            <String fx:value="radius" />
+                                                         </styleClass>
+                                                         <children>
+                                                            <Label fx:id="nbr_daily" layoutX="117.0" layoutY="39.0" prefHeight="17.0" prefWidth="36.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="57.0" layoutY="78.0" prefHeight="19.0" prefWidth="136.0" text="Number Of Daily sales " textFill="#f8f8f8">
+                                                               <font>
+                                                                  <Font size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="582.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="250.0" stylesheets="@main.css" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="582.0" AnchorPane.topAnchor="14.0">
+                                                         <styleClass>
+                                                            <String fx:value="bg-color-1" />
+                                                            <String fx:value="radius" />
+                                                         </styleClass>
+                                                         <children>
+                                                            <Label fx:id="nbr_monthlyTotalPrice" layoutX="119.0" layoutY="39.0" prefHeight="17.0" prefWidth="36.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="59.0" layoutY="78.0" prefHeight="17.0" prefWidth="171.0" text="Monthly Total Price " textFill="#f8f8f8">
+                                                               <font>
+                                                                  <Font size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <AnchorPane layoutX="864.0" layoutY="14.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="111.0" prefWidth="250.0" stylesheets="@main.css" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="864.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                                         <styleClass>
+                                                            <String fx:value="bg-color-1" />
+                                                            <String fx:value="radius" />
+                                                         </styleClass>
+                                                         <children>
+                                                            <Label fx:id="nbr_dailyTotalPrice" layoutX="125.0" layoutY="39.0" prefHeight="17.0" prefWidth="36.0" text="0" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label alignment="CENTER" layoutX="77.0" layoutY="78.0" prefHeight="19.0" prefWidth="97.0" text="Daily Total Price " textFill="#f8f8f8">
+                                                               <font>
+                                                                  <Font size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="12.0" layoutY="188.0" prefHeight="354.0" prefWidth="993.0" stylesheets="@main.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="192.0">
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                       <children>
+                                          <TableView fx:id="dashboard_tabelSell" layoutX="19.0" layoutY="128.0" onMouseClicked="#selectProdSale" prefHeight="223.0" prefWidth="846.0" stylesheets="@main.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="128.0">
+                                            <columns>
+                                              <TableColumn fx:id="dashboard_tabl_col_idSell" prefWidth="73.0" text="ID" />
+                                              <TableColumn fx:id="dashboard_tabl_col_labelOfProductSell" prefWidth="221.0" text="Label Of Product" />
+                                                <TableColumn fx:id="dashboard_tabl_col_qteSell" prefWidth="95.0" text="QTE " />
+                                                <TableColumn fx:id="dashboard_tabl_col_puSell" prefWidth="92.0" text="PU" />
+                                                <TableColumn fx:id="dashboard_tabl_col_totalPriceSell" minWidth="3.0" prefWidth="109.0" text="Total Price" />
+                                                <TableColumn fx:id="dashboard_tabl_col_familySell" prefWidth="184.0" text="Family" />
+                                                <TableColumn fx:id="dashboard_tabl_col_nLotSell" minWidth="15.0" prefWidth="59.0" text="N Lot" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <Label layoutX="14.0" layoutY="97.0" prefHeight="17.0" prefWidth="261.0" styleClass="header-1" stylesheets="@main.css" text="List Of Products To Sell">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="Name_product_toSell" layoutX="14.0" layoutY="55.0" prefHeight="23.0" prefWidth="249.0" promptText="Name Of Product" />
+                                          <Button fx:id="btn_addToSell" layoutX="384.0" layoutY="55.0" mnemonicParsing="false" onAction="#AddToSell" prefHeight="26.0" prefWidth="104.0" styleClass="btn2" stylesheets="@main.css" text="ADD To Sell" />
+                                          <Label layoutX="14.0" layoutY="14.0" prefHeight="21.0" prefWidth="142.0" styleClass="header-1" stylesheets="@main.css" text="selle a product">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="btn_ValidateToSell" layoutX="514.0" layoutY="55.0" mnemonicParsing="false" onAction="#validateSale" prefHeight="25.0" prefWidth="131.0" styleClass="btn2" stylesheets="@main.css" text="Validate the sale" />
+                                          <Button fx:id="btn_CancelSell" layoutX="673.0" layoutY="55.0" mnemonicParsing="false" onAction="#cancelSale" prefHeight="26.0" prefWidth="117.0" styleClass="btn2" stylesheets="@main.css" text="Cancel the sale" />
+                                          <TextField fx:id="quantity_product_toSell" layoutX="275.0" layoutY="55.0" prefHeight="25.0" prefWidth="67.0" promptText="Quantity" />
+                                          <Button fx:id="btn_CancelAllSell" layoutX="821.0" layoutY="55.0" mnemonicParsing="false" onAction="#cancelAll" prefHeight="26.0" prefWidth="117.0" styleClass="btn2" stylesheets="@main.css" text="Cancel ALL" />
+                                          <Button fx:id="btn_UpdateSell" layoutX="959.0" layoutY="55.0" mnemonicParsing="false" onAction="#updateSell" prefHeight="26.0" prefWidth="117.0" styleClass="btn2" stylesheets="@main.css" text="Update" AnchorPane.leftAnchor="959.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="suppliers_form" layoutX="156.0" layoutY="36.0" prefHeight="560.0" prefWidth="871.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="20.0" layoutY="14.0" prefHeight="560.0" prefWidth="871.0" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="29.0" layoutY="14.0" prefHeight="17.0" prefWidth="134.0" styleClass="header-1" stylesheets="@main.css" text="Suppliers">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="12.0" layoutY="238.0" stylesheets="@main.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="238.0">
+                                       <children>
+                                          <TableView fx:id="table_suppliers" onMouseClicked="#selectSupplier" prefHeight="290.0" prefWidth="835.0" stylesheets="@main.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                            <columns>
+                                              <TableColumn fx:id="table_suppliers_col_id" prefWidth="81.0" text="Supplier ID" />
+                                              <TableColumn fx:id="table_suppliers_col_name" prefWidth="146.0" text="Name" />
+                                                <TableColumn fx:id="table_suppliers_col_contactNumber" minWidth="9.0" prefWidth="166.0" text="Contact Number" />
+                                                <TableColumn fx:id="table_suppliers_col_email" prefWidth="121.0" text="E-mail Address" />
+                                                <TableColumn fx:id="table_suppliers_col_address" minWidth="0.0" prefWidth="122.0" text="Address" />
+                                                <TableColumn fx:id="table_suppliers_col_status" minWidth="0.0" prefWidth="114.0" text="Status" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane layoutY="39.0" prefHeight="185.0" prefWidth="819.0" stylesheets="@main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="39.0">
+                                       <children>
+                                          <TextField fx:id="name_supplier" layoutX="14.0" layoutY="42.0" prefHeight="25.0" prefWidth="208.0" promptText="Name" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="tele_supplier" layoutX="14.0" layoutY="84.0" prefHeight="25.0" prefWidth="207.0" promptText="Contact Number" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="email_supplier" layoutX="14.0" layoutY="121.0" prefHeight="25.0" prefWidth="206.0" promptText="Email" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="address_supplier" layoutX="349.0" layoutY="42.0" prefHeight="25.0" prefWidth="177.0" promptText="Adreess" />
+                                          <ComboBox fx:id="status_supplier" layoutX="349.0" layoutY="120.0" onAction="#questions" prefHeight="27.0" prefWidth="96.0" promptText="Status" />
+                                          <Button fx:id="btn_addSupplier" layoutX="451.0" layoutY="121.0" mnemonicParsing="false" onAction="#addSupplier" prefHeight="26.0" prefWidth="76.0" styleClass="btn2" stylesheets="@main.css" text="ADD" />
+                                          <Button fx:id="btn_deleteSupplier" layoutX="619.0" layoutY="44.0" mnemonicParsing="false" onAction="#deleteSupplier" prefHeight="25.0" prefWidth="91.0" styleClass="btn2" stylesheets="@main.css" text="Delete" AnchorPane.leftAnchor="619.0" />
+                                          <Button fx:id="btn_updateSupplier" layoutX="619.0" layoutY="86.0" mnemonicParsing="false" onAction="#updateSupplier" prefHeight="25.0" prefWidth="91.0" styleClass="btn2" stylesheets="@main.css" text="Update" AnchorPane.leftAnchor="619.0" />
+                                          <Button fx:id="btn_cancelSupplier" layoutX="619.0" layoutY="124.0" mnemonicParsing="false" onAction="#cancel2" prefHeight="25.0" prefWidth="91.0" styleClass="btn2" stylesheets="@main.css" text="Cancel" AnchorPane.leftAnchor="619.0" />
+                                          <TextField fx:id="ID_supplier" layoutX="349.0" layoutY="80.0" prefHeight="25.0" prefWidth="177.0" promptText="Supplier ID" />
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="radius" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="contacts_form" layoutX="156.0" layoutY="36.0" prefHeight="560.0" prefWidth="871.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="20.0" layoutY="14.0" prefHeight="560.0" prefWidth="871.0" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="29.0" layoutY="14.0" prefHeight="17.0" prefWidth="134.0" styleClass="header-1" stylesheets="@main.css" text="Contacts">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="17.0" layoutY="238.0" prefHeight="317.0" prefWidth="851.0" stylesheets="@main.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="238.0">
+                                       <children>
+                                          <TableView fx:id="table_contact" onMouseClicked="#selectContact" prefHeight="290.0" prefWidth="835.0" stylesheets="@main.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                             <columns>
+                                                <TableColumn fx:id="table_contact_col_id" prefWidth="81.0" text=" ID" />
+                                                <TableColumn fx:id="table_contact_col_name" prefWidth="146.0" text="Name" />
+                                                <TableColumn fx:id="table_contact_col_contactNumber" minWidth="9.0" prefWidth="166.0" text="Contact Number" />
+                                                <TableColumn fx:id="table_contact_col_email" prefWidth="121.0" text="E-mail Address" />
+                                                <TableColumn fx:id="table_contact_col_address" minWidth="0.0" prefWidth="122.0" text="Address" />
+                                                <TableColumn fx:id="table_contact_col_type" minWidth="0.0" prefWidth="114.0" text="Type" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="14.0" layoutY="49.0" prefHeight="185.0" prefWidth="819.0" stylesheets="@main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="39.0">
+                                       <children>
+                                          <TextField fx:id="name_contact" layoutX="15.0" layoutY="58.0" prefHeight="25.0" prefWidth="208.0" promptText="Name" AnchorPane.leftAnchor="15.0" />
+                                          <TextField fx:id="tele_contact" layoutX="16.0" layoutY="97.0" prefHeight="25.0" prefWidth="207.0" promptText="Contact Number" AnchorPane.leftAnchor="16.0" />
+                                          <TextField fx:id="email_contact" layoutX="15.0" layoutY="135.0" prefHeight="25.0" prefWidth="206.0" promptText="Email" AnchorPane.leftAnchor="15.0" />
+                                          <TextField fx:id="address_contact" layoutX="356.0" layoutY="42.0" prefHeight="25.0" prefWidth="177.0" promptText="Adreess" />
+                                          <ComboBox fx:id="type_contact" layoutX="354.0" layoutY="84.0" onAction="#questions3" prefHeight="25.0" prefWidth="79.0" promptText="Type" />
+                                          <Button fx:id="btn_addContact" layoutX="356.0" layoutY="134.0" mnemonicParsing="false" onAction="#addContact" prefHeight="25.0" prefWidth="96.0" styleClass="btn2" stylesheets="@main.css" text="ADD" />
+                                          <Button fx:id="btn_deleteContact" layoutX="619.0" layoutY="44.0" mnemonicParsing="false" onAction="#deleteContact" prefHeight="25.0" prefWidth="91.0" styleClass="btn2" stylesheets="@main.css" text="Delete" AnchorPane.leftAnchor="619.0" />
+                                          <Button fx:id="btn_updateContact" layoutX="619.0" layoutY="86.0" mnemonicParsing="false" onAction="#updateContact" prefHeight="25.0" prefWidth="91.0" styleClass="btn2" stylesheets="@main.css" text="Update" AnchorPane.leftAnchor="619.0" />
+                                          <Button fx:id="btn_cancelContact" layoutX="619.0" layoutY="124.0" mnemonicParsing="false" onAction="#cancelContact" prefHeight="25.0" prefWidth="91.0" styleClass="btn2" stylesheets="@main.css" text="Cancel" AnchorPane.leftAnchor="619.0" />
+                                          <TextField fx:id="other_fieledContact" layoutX="439.0" layoutY="84.0" prefHeight="25.0" prefWidth="94.0" promptText="type contact" visible="false" />
+                                          <TextField fx:id="id_contact" layoutX="15.0" layoutY="19.0" prefHeight="25.0" prefWidth="40.0" promptText="ID" />
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="radius" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="products_form" layoutX="10.0" layoutY="10.0" prefHeight="560.0" prefWidth="871.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="20.0" layoutY="14.0" prefHeight="560.0" prefWidth="871.0" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="29.0" layoutY="14.0" prefHeight="17.0" prefWidth="134.0" styleClass="header-1" stylesheets="@main.css" text="Products">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane fx:id="product_form" layoutX="14.0" layoutY="49.0" prefHeight="185.0" prefWidth="819.0" stylesheets="@main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="39.0">
+                                       <children>
+                                          <TextField fx:id="name_product" layoutX="47.0" layoutY="59.0" prefHeight="25.0" prefWidth="264.0" promptText="Label_Of_Product" AnchorPane.leftAnchor="47.0" />
+                                          <TextField fx:id="product_quantity" layoutX="47.0" layoutY="101.0" prefHeight="25.0" prefWidth="265.0" promptText="Quantity" AnchorPane.leftAnchor="47.0" />
+                                          <TextField fx:id="product_pu" layoutX="47.0" layoutY="142.0" prefHeight="25.0" prefWidth="264.0" promptText="Price Unit" AnchorPane.leftAnchor="47.0" />
+                                          <TextField fx:id="product_family" layoutX="398.0" layoutY="21.0" prefHeight="25.0" prefWidth="284.0" promptText="Family" />
+                                          <Button fx:id="btn_product_add" layoutX="715.0" layoutY="12.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="26.0" prefWidth="92.0" styleClass="btn2" stylesheets="@main.css" text="ADD" AnchorPane.leftAnchor="900.0" AnchorPane.rightAnchor="35.0" />
+                                          <Button fx:id="btn_product_delete" layoutX="716.0" layoutY="147.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="25.0" prefWidth="91.0" styleClass="btn2" stylesheets="@main.css" text="Delete" AnchorPane.leftAnchor="900.0" AnchorPane.rightAnchor="35.0" />
+                                          <Button fx:id="btn_product_update" layoutX="715.0" layoutY="56.0" mnemonicParsing="false" onAction="#updateProduct" prefHeight="25.0" prefWidth="91.0" styleClass="btn2" stylesheets="@main.css" text="Update" AnchorPane.leftAnchor="900.0" AnchorPane.rightAnchor="35.0" />
+                                          <Button fx:id="btn_product_cancel" layoutX="715.0" layoutY="101.0" mnemonicParsing="false" onAction="#cancelProduct" prefHeight="26.0" prefWidth="92.0" styleClass="btn2" stylesheets="@main.css" text="Cancel" AnchorPane.leftAnchor="900.0" AnchorPane.rightAnchor="35.0" />
+                                          <TextField fx:id="product_supplier" layoutX="398.0" layoutY="63.0" prefHeight="25.0" prefWidth="161.0" promptText="Supplier" />
+                                          <TextField fx:id="product_NLot" layoutX="398.0" layoutY="104.0" prefHeight="25.0" prefWidth="286.0" promptText="N Lot" />
+                                          <TextField fx:id="product_supplier_id" layoutX="573.0" layoutY="63.0" prefHeight="25.0" prefWidth="110.0" promptText="Supplier's ID" />
+                                          <TextField fx:id="id_product" layoutX="47.0" layoutY="19.0" prefHeight="25.0" prefWidth="265.0" promptText="ID Of Product" />
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="17.0" layoutY="231.0" prefHeight="308.0" prefWidth="850.0" stylesheets="@main.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="242.0">
+                                       <children>
+                                          <TableView fx:id="product_tabel" onMouseClicked="#selectProduct" prefHeight="319.0" prefWidth="926.0" stylesheets="@main.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                             <columns>
+                                                <TableColumn fx:id="product_tabl_col_id" prefWidth="73.0" text="Product_ID" />
+                                                <TableColumn fx:id="product_col_labelOfProduct" prefWidth="159.0" text="Label Of Product" />
+                                                <TableColumn fx:id="product_tabl_col_qte" prefWidth="90.0" text="QTE " />
+                                                <TableColumn fx:id="product_tabl_col_pu" prefWidth="92.0" text="PU" />
+                                                <TableColumn fx:id="product_tabl_col_totalPrice" minWidth="3.0" prefWidth="103.0" text="Total Price" />
+                                                <TableColumn fx:id="product_tabl_col_family" prefWidth="145.0" text="Family" />
+                                                <TableColumn fx:id="product_tabl_col_nLot" minWidth="15.0" prefWidth="78.0" text="N Lot" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="addsupplier2" layoutX="20.0" layoutY="39.0" prefHeight="185.0" prefWidth="850.0" stylesheets="@main.css" visible="false" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="15.0">
+                                       <children>
+                                          <TextField fx:id="name_supplier2" layoutX="14.0" layoutY="42.0" prefHeight="25.0" prefWidth="208.0" promptText="Name" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="tele_supplier2" layoutX="14.0" layoutY="84.0" prefHeight="25.0" prefWidth="207.0" promptText="Contact Number" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="email_supplier2" layoutX="14.0" layoutY="121.0" prefHeight="25.0" prefWidth="206.0" promptText="Email" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="address_supplier2" layoutX="349.0" layoutY="42.0" prefHeight="25.0" prefWidth="177.0" promptText="Adreess" />
+                                          <ComboBox fx:id="status_supplier2" layoutX="349.0" layoutY="120.0" onAction="#questions2" prefHeight="27.0" prefWidth="178.0" promptText="Status" />
+                                          <Button fx:id="btn_addSupplier2" layoutX="627.0" layoutY="42.0" mnemonicParsing="false" onAction="#addSupplier2" prefHeight="26.0" prefWidth="137.0" styleClass="btn2" stylesheets="@main.css" text="ADD" />
+                                          <Button fx:id="btn_cancelSupplier1" layoutX="628.0" layoutY="80.0" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="136.0" styleClass="btn2" stylesheets="@main.css" text="Cancel" AnchorPane.leftAnchor="628.0" />
+                                          <TextField fx:id="ID_supplier2" layoutX="349.0" layoutY="80.0" prefHeight="25.0" prefWidth="177.0" promptText="Supplier ID" />
+                                          <Label layoutX="20.0" layoutY="14.0" prefHeight="17.0" prefWidth="176.0" text="Add Supplier" textFill="#32c684">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="radius" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="stocks_form" layoutX="10.0" layoutY="10.0" prefHeight="580.0" prefWidth="905.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="20.0" layoutY="14.0" prefHeight="560.0" prefWidth="885.0" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="29.0" layoutY="14.0" prefHeight="17.0" prefWidth="134.0" styleClass="header-1" stylesheets="@main.css" text="Stocks">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane fx:id="addstock_form" layoutX="14.0" layoutY="49.0" prefHeight="185.0" prefWidth="819.0" stylesheets="@main.css" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="39.0">
+                                       <children>
+                                          <TextField fx:id="num_stock" layoutX="14.0" layoutY="42.0" prefHeight="25.0" prefWidth="243.0" promptText="ID of lot" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="name_stock" layoutX="14.0" layoutY="84.0" prefHeight="25.0" prefWidth="243.0" promptText="Name" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="quantity_stock" layoutX="14.0" layoutY="125.0" prefHeight="25.0" prefWidth="243.0" promptText="Quantity" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="price_stock" layoutX="290.0" layoutY="42.0" prefHeight="25.0" prefWidth="243.0" promptText="Price" />
+                                          <Button fx:id="btn_stock_add" layoutX="620.0" layoutY="42.0" mnemonicParsing="false" onAction="#addStock" prefHeight="26.0" prefWidth="88.0" styleClass="btn2" stylesheets="@main.css" text="ADD" />
+                                          <Button fx:id="btn_stock_delete" layoutX="732.0" layoutY="42.0" mnemonicParsing="false" onAction="#deleteStock" prefHeight="25.0" prefWidth="91.0" styleClass="btn2" stylesheets="@main.css" text="Delete" AnchorPane.leftAnchor="732.0" />
+                                          <Button fx:id="btn_stock_update" layoutX="619.0" layoutY="86.0" mnemonicParsing="false" onAction="#updateStock" prefHeight="25.0" prefWidth="91.0" styleClass="btn2" stylesheets="@main.css" text="Update" AnchorPane.leftAnchor="619.0" />
+                                          <Button fx:id="btn_stock_cancel" layoutX="619.0" layoutY="131.0" mnemonicParsing="false" onAction="#cancelStock" prefHeight="26.0" prefWidth="92.0" styleClass="btn2" stylesheets="@main.css" text="Cancel" AnchorPane.leftAnchor="619.0" />
+                                          <TextField fx:id="supplier_id_stock" layoutX="290.0" layoutY="84.0" prefHeight="25.0" prefWidth="243.0" promptText="Supplier ID" />
+                                          <TextField fx:id="family_stock" layoutX="290.0" layoutY="125.0" prefHeight="25.0" prefWidth="243.0" promptText="Family" />
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="19.0" layoutY="231.0" prefHeight="308.0" prefWidth="845.0" stylesheets="@main.css" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="242.0">
+                                       <children>
+                                          <TableView fx:id="stocks_tabel" onMouseClicked="#selectStock" prefHeight="319.0" prefWidth="926.0" stylesheets="@main.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                             <columns>
+                                                <TableColumn fx:id="stocks_tabl_col_NLot" prefWidth="73.0" text=" N Lot" />
+                                                <TableColumn fx:id="stocks_tabl_col_name" prefWidth="159.0" text="Stock's Name" />
+                                                <TableColumn fx:id="stocks_tabl_col_qte" prefWidth="90.0" text="QTE " />
+                                                <TableColumn fx:id="stocks_tabl_col_pu" prefWidth="92.0" text="PU" />
+                                                <TableColumn fx:id="stocks_tabl_col_family" prefWidth="145.0" text="Family" />
+                                                <TableColumn fx:id="stocks_tabl_col_supplier" minWidth="15.0" prefWidth="138.0" text="Supplier" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="addsupplier3" layoutX="18.0" layoutY="39.0" prefHeight="185.0" prefWidth="850.0" stylesheets="@main.css" visible="false" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="17.0">
+                                       <children>
+                                          <TextField fx:id="name_supplier3" layoutX="14.0" layoutY="42.0" prefHeight="25.0" prefWidth="208.0" promptText="Name" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="tele_supplier3" layoutX="14.0" layoutY="84.0" prefHeight="25.0" prefWidth="207.0" promptText="Contact Number" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="email_supplier3" layoutX="14.0" layoutY="121.0" prefHeight="25.0" prefWidth="206.0" promptText="Email" AnchorPane.leftAnchor="14.0" />
+                                          <TextField fx:id="address_supplier3" layoutX="349.0" layoutY="42.0" prefHeight="25.0" prefWidth="177.0" promptText="Adreess" />
+                                          <ComboBox fx:id="status_supplier3" layoutX="349.0" layoutY="120.0" onAction="#questions4" prefHeight="27.0" prefWidth="178.0" promptText="Status" />
+                                          <Button fx:id="btn_addSupplier3" layoutX="627.0" layoutY="42.0" mnemonicParsing="false" onAction="#addSupplier3" prefHeight="26.0" prefWidth="137.0" styleClass="btn2" stylesheets="@main.css" text="ADD" />
+                                          <Button fx:id="btn_cancelSupplier3" layoutX="628.0" layoutY="80.0" mnemonicParsing="false" onAction="#cancelsupplierStock" prefHeight="26.0" prefWidth="136.0" styleClass="btn2" stylesheets="@main.css" text="Cancel" AnchorPane.leftAnchor="628.0" />
+                                          <TextField fx:id="ID_supplier3" layoutX="349.0" layoutY="80.0" prefHeight="25.0" prefWidth="177.0" promptText="Supplier ID" />
+                                          <Label layoutX="20.0" layoutY="14.0" prefHeight="17.0" prefWidth="176.0" text="Add Supplier" textFill="#32c684">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="radius" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="facteur_forme" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="560.0" prefWidth="1099.0" styleClass="white-bg" stylesheets="@main.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="167.0" prefWidth="358.0" stylesheets="@main.css">
+                                       <children>
+                                          <Label layoutX="13.0" layoutY="14.0" prefHeight="17.0" prefWidth="196.0" text="identification of the seller">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <AnchorPane layoutX="7.0" layoutY="43.0" prefHeight="116.0" prefWidth="338.0" stylesheets="@main.css">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="2.0" prefHeight="19.0" prefWidth="106.0" text="Name                   :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="34.0" prefHeight="19.0" prefWidth="106.0" text="Address                :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="67.0" prefHeight="19.0" prefWidth="115.0" text="SIREN Number      :">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="96.0" prefHeight="19.0" prefWidth="108.0" text="telephone Number:">
+                                                   <font>
+                                                      <Font name="System Bold Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="141.0" layoutY="6.0" prefHeight="17.0" prefWidth="169.0" text="Parapharmacie alwafae">
+                                                   <font>
+                                                      <Font name="System Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="141.0" layoutY="35.0" prefHeight="17.0" prefWidth="199.0" text="Mohammed VI Street ait melloul">
+                                                   <font>
+                                                      <Font name="System Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="141.0" layoutY="68.0" prefHeight="17.0" prefWidth="169.0" text="123 859 647">
+                                                   <font>
+                                                      <Font name="System Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="141.0" layoutY="94.0" prefHeight="17.0" prefWidth="169.0" text="0689075402">
+                                                   <font>
+                                                      <Font name="System Italic" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                             </styleClass>
+                                          </AnchorPane>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="24.0" layoutY="197.0" prefHeight="266.0" prefWidth="1052.0" stylesheets="@main.css" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="23.0">
+                                       <children>
+                                          <TableView fx:id="table_factor" prefHeight="297.0" prefWidth="1078.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                              <TableColumn fx:id="table_factorColumn_Label" prefWidth="332.0" text="label Of Product" />
+                                              <TableColumn fx:id="table_factorColumn_qte" minWidth="0.0" prefWidth="198.0" text="Quantity" />
+                                                <TableColumn fx:id="table_factorColumn_pu" minWidth="0.0" prefWidth="238.0" text="Unit Price HT" />
+                                                <TableColumn fx:id="table_factorColumn_totalprice" minWidth="0.0" prefWidth="223.0" text="Total Price HT" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="772.0" layoutY="477.0" prefHeight="83.0" prefWidth="304.0">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="100.0" styleClass="backround-lable1" stylesheets="@main.css" text="Total HT">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="14.0" layoutY="34.0" prefHeight="17.0" prefWidth="100.0" text="VAT Amount" AnchorPane.bottomAnchor="33.0">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="14.0" layoutY="62.0" prefHeight="17.0" prefWidth="100.0" styleClass="backround-lable1" stylesheets="@main.css" text="Total TTC">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="totale_ht" alignment="CENTER" layoutX="177.0" layoutY="5.0" prefHeight="17.0" prefWidth="113.0" styleClass="backround-lable2" stylesheets="@main.css" text="0" />
+                                          <Label alignment="CENTER" layoutX="177.0" layoutY="33.0" prefHeight="17.0" prefWidth="113.0" text="20%" />
+                                          <Label fx:id="total_ttc" alignment="CENTER" layoutX="177.0" layoutY="61.0" prefHeight="17.0" prefWidth="113.0" styleClass="backround-lable2" stylesheets="@main.css" text="0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="550.0" layoutY="121.0" prefHeight="19.0" prefWidth="68.0" text="Invoice  N°">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font></Label>
+                                    <Label layoutX="550.0" layoutY="151.0" prefHeight="17.0" prefWidth="44.0" text="Date :" />
+                                    <Label fx:id="numberOfFactor" layoutX="618.0" layoutY="122.0" prefHeight="17.0" prefWidth="113.0" text="Label">
+                                       <font>
+                                          <Font name="System Bold Italic" size="12.0" />
+                                       </font></Label>
+                                    <Label fx:id="dateFacteur" layoutX="584.0" layoutY="151.0" prefHeight="17.0" prefWidth="113.0" text="Label" />
+                                    <Button fx:id="imprimer_button" layoutX="162.0" layoutY="533.0" mnemonicParsing="false" onAction="#imprimer" prefHeight="25.0" prefWidth="154.0" styleClass="btn2" stylesheets="@main.css" text="Imprimer" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
